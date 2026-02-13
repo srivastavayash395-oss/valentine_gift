@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For my valentine💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&family=Playwrite+NZ+Basic:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            /* centers horizontally */
+            align-items: center;
+            /* centers vertically */
+            height: 100vh;
+            /* full viewport height */
+            margin: 0;
+            /* remove default body margin */
+            background-color: rgba(255, 234, 238, 0.87);
+            overflow: hidden;
+        }
+
+        .BOX_ {
+            padding: 20px;
+            box-shadow: 1px 1px 10px rgb(233, 37, 70);
+            background-color: white;
+            transition: all ease 0.3s;
+            position: relative;
+        }
+
+
+
+
+        .BOX_:hover {
+            padding: 0px;
+            border: 0;
+        }
+
+        .box {
+            display: flex;
+
+            justify-content: center;
+            padding: 80px;
+
+            border: 3px solid #ffffff;
+            /* width: 60s0px; */
+            background-color: pink;
+            box-shadow: 1px 1px 10px rgb(233, 37, 70);
+        }
+
+        .ques {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .ques-text {
+            font-family: "Playwrite NZ Basic", cursive;
+            color: #ffffff;
+            font-size: 50px;
+            text-shadow: 2px 2px 0.5px black;
+        }
+
+        .button-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 30px;
+            width: 350px;
+
+        }
+
+        #yesBtn {
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            border: 1px solid rgb(37, 34, 37);
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+
+        }
+
+        #yesBtn:hover {
+            transform: translateY(5px);
+            background-color: rgb(143, 9, 31);
+            color: white;
+        }
+
+        #noBtn {
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            border: 1px solid rgb(37, 34, 37);
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+
+        #noBtn:hover {
+            transform: translateY(5px);
+            background-color: rgb(143, 9, 31);
+            color: white;
+        }
+
+        .loveMsg {
+    font-family: "Playwrite NZ Basic", cursive;
+    color: rgb(176, 25, 76);
+    font-size: 30px;
+}
+
+        .flower {
+            position: absolute;
+            width: 200px;
+            height: auto;
+            top: -80px;
+            /* adjust as you like */
+            right: -80px;
+        }
+
+
+        @media (max-width: 600px) {
+            .box {
+                padding: 30px;
+            }
+
+            .ques-text {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .button-box {
+                width: 100%;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            #result img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="BOX_">
+            <img src="—Pngtree—white and yellow flower close_23557110.png" class="flower">
+            <div class="box">
+
+
+
+                <div class="ques">
+                    <!-- <h1 class="ques-text">Will You Be My Valentine❤️ ?</h1> -->
+                    <h1 class="ques-text" id="typeText"></h1>
+
+                    <div class="button-box">
+                        <button id="yesBtn">Yes 💖</button>
+                        <button id="noBtn">No 💔</button>
+                    </div>
+                    <div id="result" style="display:none; text-align:center; margin-top:20px;">
+                        <!-- <h2
+                            style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color:white;">
+                            YAYYYY 💕 I LOVE YOU CUTIE 🥰
+                        </h2> -->
+                        <h2 class="loveMsg">
+    Bubu, you are the most beautiful part of my life 💕 <br> 
+    I promise to love you in --------<br> every version of us,  
+    in every phase, in every lifetime 🥺❤️<br>"Thnx For Chossing Me!!"
+</h2>
+
+                        <img src="bear-kiss-bear-kisses.gif" alt="Love GIF"
+                            style="max-width: 500px; border-radius: 15px; ">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script>
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+        const result = document.getElementById("result");
+
+        // YES button logic
+        yesBtn.addEventListener("click", () => {
+            result.style.display = "block";
+            yesBtn.style.display = "none";
+            noBtn.style.display = "none";
+        });
+
+        // NO button escape logic 😈
+        noBtn.addEventListener("mouseover", () => {
+
+    const safeMargin = 20; // keeps button inside edges
+
+    const maxX = window.innerWidth - noBtn.offsetWidth - safeMargin;
+    const maxY = window.innerHeight - noBtn.offsetHeight - safeMargin;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    noBtn.style.position = "fixed"; // 🔥 important
+    noBtn.style.left = `${x}px`;
+    noBtn.style.top = `${y}px`;
+});
+
+
+
+        const message = "Will You Be My Valentine, Aditi ❤️ ?";
+        let index = 0;
+
+        function typeWriter() {
+            if (index < message.length) {
+                document.getElementById("typeText").innerHTML += message.charAt(index);
+                index++;
+                setTimeout(typeWriter, 70);
+            }
+        }
+
+        typeWriter();
+
+
+    </script>
+
+</body>
+
+</html>
