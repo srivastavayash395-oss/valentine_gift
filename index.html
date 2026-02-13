@@ -18,12 +18,12 @@
             /* centers horizontally */
             align-items: center;
             /* centers vertically */
-            height: 100vh;
+            min-height: 100vh;
             /* full viewport height */
             margin: 0;
             /* remove default body margin */
             background-color: rgba(255, 234, 238, 0.87);
-            overflow: hidden;
+            overflow-x: hidden; /* only hide horizontal scroll */
         }
 
         .BOX_ {
@@ -32,6 +32,7 @@
             background-color: white;
             transition: all ease 0.3s;
             position: relative;
+            
         }
 
 
@@ -43,16 +44,16 @@
         }
 
         .box {
-            display: flex;
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+    border: 3px solid #ffffff;
+    background-color: pink;
+    box-shadow: 1px 1px 10px rgb(233, 37, 70);
 
-            justify-content: center;
-            padding: 80px;
+    /* width: 100%;   🔥 important */
+}
 
-            border: 3px solid #ffffff;
-            /* width: 60s0px; */
-            background-color: pink;
-            box-shadow: 1px 1px 10px rgb(233, 37, 70);
-        }
 
         .ques {
             display: flex;
@@ -121,6 +122,7 @@
             top: -80px;
             /* adjust as you like */
             right: -80px;
+             max-width: 40vw;
         }
 
 
