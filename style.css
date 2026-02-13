@@ -1,0 +1,129 @@
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: rgba(255, 234, 238, 0.87);
+        overflow-x: hidden;
+    }
+
+    .BOX_ {
+        padding: 20px;
+        box-shadow: 1px 1px 10px rgb(233, 37, 70);
+        background-color: white;
+        transition: all ease 0.3s;
+        position: relative;
+
+        max-width: 95vw;   /* 🔥 RESPONSIVE FIX */
+        width: 100%;       /* 🔥 RESPONSIVE FIX */
+        border-radius: 12px; /* 🔥 RESPONSIVE FIX */
+    }
+
+    .BOX_:hover {
+        padding: 0px;
+        border: 0;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        padding: 80px;
+        border: 3px solid #ffffff;
+        background-color: pink;
+        box-shadow: 1px 1px 10px rgb(233, 37, 70);
+
+        width: 100%;      /* 🔥 RESPONSIVE FIX */
+        box-sizing: border-box; /* 🔥 RESPONSIVE FIX */
+        border-radius: 10px; /* 🔥 RESPONSIVE FIX */
+    }
+
+    .ques {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%; /* 🔥 RESPONSIVE FIX */
+    }
+
+    .ques-text {
+        font-family: "Playwrite NZ Basic", cursive;
+        color: #ffffff;
+        font-size: 50px;
+        text-shadow: 2px 2px 0.5px black;
+        text-align: center; /* 🔥 RESPONSIVE FIX */
+    }
+
+    .button-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* 🔥 RESPONSIVE FIX */
+        gap: 30px; /* 🔥 RESPONSIVE FIX */
+        margin: 30px;
+        width: 100%; /* 🔥 RESPONSIVE FIX */
+        max-width: 350px; /* 🔥 RESPONSIVE FIX */
+    }
+
+    #yesBtn, #noBtn {
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 20px;
+        border: 1px solid rgb(37, 34, 37);
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    #yesBtn:hover, #noBtn:hover {
+        transform: translateY(5px);
+        background-color: rgb(143, 9, 31);
+        color: white;
+    }
+
+    .loveMsg {
+        font-family: "Playwrite NZ Basic", cursive;
+        color: rgb(176, 25, 76);
+        font-size: 30px;
+        text-align: center; /* 🔥 RESPONSIVE FIX */
+    }
+
+    .flower {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        top: -80px;
+        right: -80px;
+        max-width: 40vw;
+    }
+
+    /* 🔥 GIF RESPONSIVE FIX */
+    #result img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 🔥 MOBILE RESPONSIVE */
+    @media (max-width: 600px) {
+        .box {
+            padding: 30px;
+        }
+
+        .ques-text {
+            font-size: 26px;
+        }
+
+        .button-box {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .flower {
+            width: 120px;  /* 🔥 RESPONSIVE FIX */
+            top: -40px;    /* 🔥 RESPONSIVE FIX */
+            right: -40px;  /* 🔥 RESPONSIVE FIX */
+        }
+
+        .loveMsg {
+            font-size: 20px; /* 🔥 RESPONSIVE FIX */
+        }
+    }
+
